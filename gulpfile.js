@@ -5,9 +5,10 @@ const browserSync = require('browser-sync').create();
 //Create a static server
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: {
-            baseDir: "./src/"
-        }
+      browser: "google chrome",
+      server: {
+          baseDir: "./src/",
+      }
     });
 
     gulp.watch("./src/public/sass/*.scss", ['sass']).on('change', browserSync.reload);
