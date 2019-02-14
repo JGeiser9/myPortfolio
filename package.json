@@ -1,0 +1,26 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "A Personal Portfolio",
+  "main": "main.js",
+  "scripts": {
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JGeiser9/myPortfolio.git"
+  },
+  "author": "Jake Geiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JGeiser9/myPortfolio/issues"
+  },
+  "homepage": "https://github.com/JGeiser9/myPortfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "eslint": "^5.13.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "prettier": "1.16.4"
+  }
+}
