@@ -20,7 +20,7 @@
     "browser-sync": "^2.26.3",
     "eslint": "^5.13.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.2",
-    "prettier": "1.16.4"
-  }
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {}
 }
