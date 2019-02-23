@@ -1,3 +1,10 @@
-.header {
-  color: red;
-  font-size: 16pt; }
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid red;
+  box-sizing: border-box; }
