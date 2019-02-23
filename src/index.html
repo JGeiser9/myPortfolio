@@ -3,75 +3,79 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jake.</title>
+    <title>Jake | MN</title>
     <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
     <script src="/public/js/main.js" async></script>
   </head>
   <body>
 
-    <!-- Begin Navigation -->
+    <!-- BEGIN NAVIGATION BAR -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
         </a>
-
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <!-- necessary for burger to work -->
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
+      <!-- right side of navbar -->
+      <div id="navbar" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item">
             Home
           </a>
-
-          <a class="navbar-item">
-            Documentation
-          </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
-            </a>
-
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                About
-              </a>
-              <a class="navbar-item">
-                Jobs
-              </a>
-              <a class="navbar-item">
-                Contact
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                Report an issue
-              </a>
-            </div>
-          </div>
         </div>
-
+        <!-- left side of navbar -->
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
               <a class="button is-primary">
                 <strong>Sign up</strong>
               </a>
-              <a class="button is-light">
-                Log in
-              </a>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    <!-- Hero Section -->
+
+    <!-- BEGIN HERO SECTION -->
     <section class="hero">
+      <div class="heroContainer">
+
+        <!-- left content: text -->
+        <div class="heroContent hero-left">
+
+          <div class="myName">
+            <h1>Hi, my name is Jake</h1>
+          </div>
+
+          <div class="introMessage">
+            <h2>
+              I am a software Developer, co-founder of both
+              <span>
+                <a class="websiteLinks urkel" href="https://urkel.io/" target="_blank" rel="noopener noreferrer">Urkel</a>
+              </span> and the
+              <span>
+                <a class="websiteLinks ha" href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">Handshake Alliance</a>
+              </span>, and a blockchain enthusiast. Outside of programming you
+              can find me enjoying the outdoors or daydreaming about my next ski trip.
+            </h2>
+          </div>
+
+        </div>
+
+        <!-- right content: image -->
+        <div class="heroContent hero-right">
+          <div class="heroImage">
+            <img src="public/images/developer.svg" alt="image of desk and developer">
+          </div>
+        </div>
+
+      </div>
 
     </section>
   </body>
