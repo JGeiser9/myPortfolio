@@ -6929,7 +6929,8 @@ label.panel-block {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  box-sizing: border-box; }
 
 h1 {
   font-size: 22pt;
@@ -6938,10 +6939,23 @@ h1 {
 h2 {
   font-size: 16pt; }
 
+.navbar {
+  margin-top: 5px; }
+
+.is-active {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column; }
+
+.navbar-item {
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .hero {
   height: 580px;
-  width: 100%;
-  box-sizing: border-box; }
+  width: 100%; }
 
 .heroContainer {
   height: 100%;
@@ -6952,11 +6966,11 @@ h2 {
   justify-content: center;
   align-items: center;
   display: flex; }
+  .heroContent.hero-right {
+    width: 55%; }
   .heroContent.hero-left {
     width: 45%;
     flex-direction: column; }
-  .heroContent.hero-right {
-    width: 55%; }
 
 .myName {
   margin-bottom: 20px; }
@@ -6981,3 +6995,28 @@ h2 {
 .heroImage {
   margin-top: 50px;
   width: 90%; }
+
+.about {
+  height: 600px;
+  background-color: #fcfcfc;
+  width: 100%; }
+
+.headerContainer {
+  height: auto;
+  padding-top: 50px;
+  text-align: center; }
+
+.projects {
+  height: 600px;
+  background-color: #fff;
+  width: 100%; }
+
+.contact {
+  height: 600px;
+  background-color: #fcfcfc;
+  width: 100%; }
+
+.footer {
+  height: 300px;
+  background-color: #fff;
+  width: 100%; }
