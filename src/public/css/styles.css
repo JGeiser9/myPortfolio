@@ -7007,9 +7007,32 @@ h2 {
   text-align: center; }
 
 .projects {
-  height: 600px;
+  height: 650px;
   background-color: #fff;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.row {
+  height: 250px;
+  display: flex;
+  align-items: center; }
+
+.bottomRow, .topRow {
+  display: flex;
+  justify-content: center; }
+
+.card {
+  height: 200px;
+  width: 200px;
+  margin: 0 25px;
+  display: flex;
+  box-shadow: none;
+  border-radius: 15px;
+  justify-content: center; }
+
+.academy {
+  padding-top: 10px; }
 
 .contact {
   height: 600px;
