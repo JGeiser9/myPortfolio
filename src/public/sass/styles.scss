@@ -1,4 +1,7 @@
 @import "./node_modules/bulma/bulma.sass";
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -30,7 +33,7 @@ h2 { font-size: 16pt; }
 
 // ---------- HERO SECTION ----------
 // General Setup
-.hero {
+.heroSection {
   height: 580px;
   width: 100%;
 }
@@ -78,7 +81,7 @@ h2 { font-size: 16pt; }
 
 // ---------- ABOUT SECTION ----------
 // General Setup
-.about {
+.aboutSection {
   height: 600px;
   background-color: #fcfcfc;
   width: 100%;
@@ -92,7 +95,7 @@ h2 { font-size: 16pt; }
 
 // ---------- PROJECTS SECTION ----------
 // General Setup
-.projects {
+.projectSection {
   height: 650px;
   background-color: #fff;
   width: 100%;
@@ -108,10 +111,54 @@ h2 { font-size: 16pt; }
 }
 
 .card {
+  padding: 30px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.description {
+    margin: 15px 0;
+    width: 95%;
+}
+
+.btnContainer {
+  margin-top: 10px;
+}
+
+.btnLink {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  margin: 0 2.5px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: 1.5px solid #f6ae2e;
+  &:hover {
+    color: #f6ae2e;
+  }
+}
+
+.website {
+  background-color: #f6ae2e;
+  color: #fff;
+  &:hover {
+    color: #fff;
+    background-color: #faa100;
+    border-color: #faa100;
+  }
+}
+
+.source {
+  color: #f6ae2e;
+  &:hover {
+    color: #fff;
+    border-color: #f6ae2e;
+    background-color: #f6ae2e;
+  }
 }
 
 [type=radio] {
@@ -182,7 +229,7 @@ h2 { font-size: 16pt; }
 
 // ---------- CONTACT SECTION ----------
 // General Setup
-.contact {
+.contactSection {
   height: 600px;
   background-color: #fcfcfc;
   width: 100%;

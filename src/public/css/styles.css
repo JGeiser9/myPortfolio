@@ -6926,6 +6926,9 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   margin: 0;
   padding: 0;
@@ -6953,7 +6956,7 @@ h2 {
   justify-content: center;
   align-items: center; }
 
-.hero {
+.heroSection {
   height: 580px;
   width: 100%; }
 
@@ -6996,7 +6999,7 @@ h2 {
   margin-top: 50px;
   width: 90%; }
 
-.about {
+.aboutSection {
   height: 600px;
   background-color: #fcfcfc;
   width: 100%; }
@@ -7006,7 +7009,7 @@ h2 {
   padding-top: 50px;
   text-align: center; }
 
-.projects {
+.projectSection {
   height: 650px;
   background-color: #fff;
   width: 100%;
@@ -7020,10 +7023,46 @@ h2 {
   height: 100%; }
 
 .card {
+  padding: 30px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
+
+.description {
+  margin: 15px 0;
+  width: 95%; }
+
+.btnContainer {
+  margin-top: 10px; }
+
+.btnLink {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  margin: 0 2.5px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: 1.5px solid #f6ae2e; }
+  .btnLink:hover {
+    color: #f6ae2e; }
+
+.website {
+  background-color: #f6ae2e;
+  color: #fff; }
+  .website:hover {
+    color: #fff;
+    background-color: #faa100;
+    border-color: #faa100; }
+
+.source {
+  color: #f6ae2e; }
+  .source:hover {
+    color: #fff;
+    border-color: #f6ae2e;
+    background-color: #f6ae2e; }
 
 [type=radio] {
   display: none; }
@@ -7093,7 +7132,7 @@ h2 {
 #slide5 {
   background: #fff; }
 
-.contact {
+.contactSection {
   height: 600px;
   background-color: #fcfcfc;
   width: 100%; }
