@@ -19,3 +19,37 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 });
+
+// Smooth scroll function - self invoking
+(() => {
+	// Declaration of variables to navbar options
+	let home = document.querySelector(".homeNav");
+	let about = document.querySelector(".aboutNav");
+	let projects = document.querySelector(".projectsNav");
+	let contact = document.querySelector(".contactNav");
+
+	// Listen for clicks and scroll to the section
+	home.addEventListener("click", () => {
+		document.querySelector(".heroSection").scrollIntoView({
+			behavior: "smooth"
+		});
+	});
+
+	about.addEventListener("click", () => {
+		document.querySelector(".aboutSection").scrollIntoView({
+			behavior: "smooth"
+		});
+	});
+
+	projects.addEventListener("click", () => {
+		document.querySelector(".projectSection").scrollIntoView({
+			behavior: "smooth"
+		});
+	});
+
+	contact.addEventListener("click", () => {
+		document.querySelector(".contactSection").scrollIntoView({
+			behavior: "smooth"
+		});
+	});
+})();
