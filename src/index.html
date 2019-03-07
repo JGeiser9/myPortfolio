@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jake | MN</title>
     <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
-    <script src="/public/js/main.js" async></script>
   </head>
   <body>
 
@@ -25,16 +24,16 @@
       <!-- right side of navbar -->
       <div id="navbar" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
+          <a class="navbar-item homeNav">
             Home
           </a>
-          <a class="navbar-item">
+          <a class="navbar-item aboutNav">
             About
           </a>
-          <a class="navbar-item">
+          <a class="navbar-item projectsNav">
             Projects
           </a>
-          <a class="navbar-item">
+          <a class="navbar-item contactNav">
             Contact
           </a>
         </div>
@@ -52,7 +51,7 @@
     </nav>
 
     <!-- BEGIN HERO SECTION -->
-    <section class="hero">
+    <section class="heroSection">
       <div class="heroContainer">
 
         <!-- left content: text -->
@@ -88,14 +87,14 @@
     </section>
 
     <!-- BEGIN ABOUT SECTION -->
-    <section class="about">
+    <section class="aboutSection">
       <div class="headerContainer">
         <img src="public/images/aboutme.svg" alt="AboutMe" width="175px">
       </div>
     </section>
 
     <!-- BEGIN PROJECTS SECTION -->
-    <section class="projects">
+    <section class="projectSection">
       <div class="headerContainer">
         <img src="public/images/myprojects.svg" alt="MyProjects" width="240px">
       </div>
@@ -116,10 +115,17 @@
                 </g>
               </g>
             </svg>
+            <div class="description">
+              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum </p>
+            </div>
+            <div class="btnContainer">
+              <a class="btnLink website" href="https://handshakealliance.org" target="_blank" rel="noopener noreferrer">Website</a>
+              <a class="btnLink source" href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
           </label>
           <!-- Urkel Card -->
           <label for="s2" id="slide2" class="card">
-            <svg width="100%" height="5rem" viewBox="0 0 149 94" version="1.1">
+            <svg class="urkelLogo" width="100%" height="5rem" viewBox="0 0 149 94" version="1.1">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="UrkelGlasses" transform="translate(0.000000, 1.000000)">
                         <g id="glasses-(1)" transform="translate(17.000000, 0.000000)">
@@ -137,6 +143,12 @@
                     </g>
                 </g>
             </svg>
+            <div class="description">
+              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum </p>
+            </div>
+            <div class="btnContainer">
+              <a class="btnLink website" href="https://urkel.io" target="_blank" rel="noopener noreferrer">Website</a>
+            </div>
           </label>
           <!-- HNScan Card -->
           <label for="s3" id="slide3" class="card">
@@ -152,6 +164,13 @@
                     </g>
                 </g>
             </svg>
+            <div class="description">
+              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum </p>
+            </div>
+            <div class="btnContainer">
+              <a class="btnLink website" href="https://hnscan.com" target="_blank" rel="noopener noreferrer">Website</a>
+              <a class="btnLink source" href="https://github.com/HandshakeAlliance/HNScan" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
           </label>
           <!-- Nameian Card -->
           <label for="s4" id="slide4" class="card">
@@ -163,6 +182,12 @@
                 </g>
               </g>
             </svg>
+            <div class="description">
+              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum </p>
+            </div>
+            <div class="btnContainer">
+              <a class="btnLink website" href="https://nameian.com" target="_blank" rel="noopener noreferrer">Website</a>
+            </div>
           </label>
           <!-- Handshake Academy Card -->
           <label for="s5" id="slide5" class="card">
@@ -174,13 +199,20 @@
                 </g>
               </g>
             </svg>
+            <div class="description">
+              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum </p>
+            </div>
+            <div class="btnContainer">
+              <a class="btnLink website" href="https://handshakeacademy.org" target="_blank" rel="noopener noreferrer">Website</a>
+              <a class="btnLink source" href="https://github.com/HandshakeAlliance/handshakeacademy.org" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
           </label>
         </div>
       </div>
     </section>
 
     <!-- BEGIN CONTACT SECTION -->
-    <section class="contact">
+    <section class="contactSection">
       <div class="headerContainer">
         <img src="public/images/contactme.svg" alt="ContactMe" width="240px">
       </div>
@@ -191,5 +223,6 @@
 
     </footer>
 
+    <script src="/public/js/main.js"></script>
   </body>
 </html>
