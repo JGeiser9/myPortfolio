@@ -20,13 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-// Smooth scroll function - self invoking
+// Event Listeners
 (() => {
 	// Declaration of variables to navbar options
 	let home = document.querySelector(".homeNav");
 	let about = document.querySelector(".aboutNav");
 	let projects = document.querySelector(".projectsNav");
 	let contact = document.querySelector(".contactNav");
+	let textArea = document.querySelector(".textArea");
 
 	// Listen for clicks and scroll to the section
 	home.addEventListener("click", () => {
@@ -52,4 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
 			behavior: "smooth"
 		});
 	});
+
+	textArea.addEventListener("keydown", autosize);
 })();
+
+function autosize() {
+	let el = this;
+	el.style.cssText = "height: auto";
+	el.style.cssText = "height:" + el.scrollHeight + "px";
+}
