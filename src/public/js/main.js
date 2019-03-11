@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	textArea.addEventListener("keydown", autosize);
 })();
 
+// Auto resize the text area form
 function autosize() {
 	let el = this;
 	el.style.cssText = "height: auto";
