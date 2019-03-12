@@ -7007,18 +7007,18 @@ h2 {
   display: -ms-flexbox;
   display: flex; }
   .heroContent.hero-right {
-    margin: 35px 0 20px;
+    margin: 50px 0 30px;
     width: 70%;
-    min-width: 350px; }
+    min-width: 375px; }
   .heroContent.hero-left {
-    width: 98%;
+    width: 88%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
   @media (min-width: 510px) {
     .heroContent.hero-left {
-      width: 75%; } }
+      width: 70%; } }
   @media (min-width: 1087px) {
     .heroContent {
       height: 100%;
@@ -7035,29 +7035,20 @@ h2 {
         width: 55%; }
       .heroContent.hero-left {
         width: 45%;
+        margin-left: 30px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column; } }
 
 .myName {
-  margin-bottom: 20px; }
-  @media (max-width: 1087px) {
-    .myName {
-      margin-bottom: 10px; } }
+  margin-bottom: 15px; }
 
 .introMessage {
-  margin-left: 30px;
-  width: 95%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  .introMessage h1,
-  .introMessage h2 {
-    text-align: center; }
-  @media (max-width: 1087px) {
+  text-align: center; }
+  @media (min-width: 510px) {
     .introMessage {
-      margin: 0; } }
+      width: 90%; } }
 
 .websiteLinks {
   color: #4a4a4a;

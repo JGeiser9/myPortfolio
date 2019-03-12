@@ -1,4 +1,6 @@
 @import "./node_modules/bulma/bulma.sass";
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -93,13 +95,13 @@ h2 {
   display: flex;
 
   &.hero-right {
-    margin: 35px 0 20px;
+    margin: 50px 0 30px;
     width: 70%;
-    min-width: 350px;
+    min-width: 375px;
   }
 
   &.hero-left {
-    width: 98%;
+    width: 88%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -108,7 +110,7 @@ h2 {
 
   @media (min-width: 510px) {
     &.hero-left {
-      width: 75%;
+      width: 70%;
     }
   }
 
@@ -130,6 +132,7 @@ h2 {
 
     &.hero-left {
       width: 45%;
+      margin-left: 30px;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -138,26 +141,12 @@ h2 {
   }
 }
 // Left Content Styling
-.myName {
-  margin-bottom: 20px;
-  @media (max-width: 1087px) {
-    margin-bottom: 10px;
-  }
-}
+.myName { margin-bottom: 15px; }
 
 .introMessage {
-  margin-left: 30px;
-  width: 95%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-
-  & h1,
-  h2 {
-    text-align: center;
-  }
-  @media (max-width: 1087px) {
-    margin: 0;
+  text-align: center;
+  @media (min-width: 510px) {
+    width: 90%;
   }
 }
 
