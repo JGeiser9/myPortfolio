@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jake | MN</title>
     <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
   </head>
   <body>
 
     <!-- BEGIN NAVIGATION BAR -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" name="hero">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
         </a>
         <!-- necessary for burger to work -->
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+        <a id="burger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -24,16 +25,16 @@
       <!-- right side of navbar -->
       <div id="navbar" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item homeNav">
+          <a class="navbar-item homeNav" name="hero">
             Home
           </a>
-          <a class="navbar-item aboutNav">
+          <a class="navbar-item aboutNav" name="about">
             About
           </a>
-          <a class="navbar-item projectsNav">
+          <a class="navbar-item projectsNav" name="project">
             Projects
           </a>
-          <a class="navbar-item contactNav">
+          <a class="navbar-item contactNav" name="contact">
             Contact
           </a>
         </div>
@@ -58,10 +59,10 @@
               </span> and the
               <span>
                 <a class="websiteLinks ha" href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">Handshake Alliance</a>
-              </span>. Blockchain and Cyber Security Enthusiast. Night Owl.
+              </span>. Blockchain and Cyber Security Enthusiast.
             </h2>
           </div>
-          
+
         </div>
 
         <!-- right content: image -->
@@ -79,6 +80,45 @@
     <section class="aboutSection">
       <div class="headerContainer">
         <img src="public/images/aboutme.svg" alt="AboutMe" width="175px">
+      </div>
+      <div class="aboutContainer">
+        <div class="aboutInfo">
+          <div class="imgContainer">
+            <img src="public/images/learning.svg" width="110px">
+          </div>
+          <h2 class="aboutTitle">Self Taught</h2>
+          <p class="aboutParagraph">
+            Owning a lawn business throughout school had me constantly learning
+            how to fix and build things to keep my business running. When I was introduced
+            web development it was a perfect match. The same overwhelming sense of joy when
+            things finally work correctly had me hooked. Fast forward several years and that
+            joy continues to pushe me every day.
+          </p>
+        </div>
+        <div class="aboutInfo">
+          <div class="imgContainer">
+            <img src="public/images/camping.svg">
+          </div>
+          <h2 class="aboutTitle">Outside of Code</h2>
+          <p class="aboutParagraph">
+            When I am away from my computer you will find me outdoors. My hobbies include
+            a twilight round of golf, hard or softwater fishing with some friends, calling birds
+            into a duck blind, or hiking up mountains with my skis to enjoy every untouched turn
+            on the way down.
+          </p>
+        </div>
+        <div class="aboutInfo">
+          <div class="imgContainer">
+            <img src="public/images/space.svg">
+          </div>
+          <h2 class="aboutTitle">What's Next...</h2>
+          <p class="aboutParagraph">
+            My goal is to break into software development full-time. I am actively learning new technologies
+            to incorporate in my projects. Things I am learning more about include: Rust lang
+            for fast and scalable applications, SQL for database management, and CompTIA Network+ to keep the
+            websites I build safe.
+          </p>
+        </div>
       </div>
     </section>
 

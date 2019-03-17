@@ -22,44 +22,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Event Listeners
 (() => {
-	// Declaration of variables to navbar options
-	let home = document.querySelector(".homeNav");
-	let about = document.querySelector(".aboutNav");
-	let projects = document.querySelector(".projectsNav");
-	let contact = document.querySelector(".contactNav");
+	let navItems = document.querySelectorAll(".navbar-item");
 	let textArea = document.querySelector(".textArea");
+	let burger = document.querySelector("#burger");
+	let nav = document.querySelector("#navbar");
 
-	// Listen for clicks and scroll to the section
-	home.addEventListener("click", () => {
-		document.querySelector(".heroSection").scrollIntoView({
-			behavior: "smooth"
+	// Smooth scroll to section when clicked and close navbar
+	navItems.forEach( el => {
+		let name = el.getAttribute("name");
+		el.addEventListener("click", () => {
+			document.querySelector(`.${name}Section`).scrollIntoView({
+				behavior: "smooth"
+			});
+			burger.classList.remove("is-active");
+			nav.classList.remove("is-active");
 		});
 	});
 
-	about.addEventListener("click", () => {
-		document.querySelector(".aboutSection").scrollIntoView({
-			behavior: "smooth"
-		});
+	textArea.addEventListener("keydown", () => {
+		textArea.style.cssText = "height: auto";
+		textArea.style.cssText = "height:" + textArea.scrollHeight + "px";
 	});
-
-	projects.addEventListener("click", () => {
-		document.querySelector(".projectSection").scrollIntoView({
-			behavior: "smooth"
-		});
-	});
-
-	contact.addEventListener("click", () => {
-		document.querySelector(".contactSection").scrollIntoView({
-			behavior: "smooth"
-		});
-	});
-
-	textArea.addEventListener("keydown", autosize);
 })();
 
-// Auto resize the text area form
-function autosize() {
-	let el = this;
-	el.style.cssText = "height: auto";
-	el.style.cssText = "height:" + el.scrollHeight + "px";
-}
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+let prevPos = window.pageYOffset;
+window.onscroll = () => {
+	let currentPos = window.pageYOffset;
+	// Prevent hiding on upward scroll bouncing at top: 0
+	if (currentPos > 0) {
+		if (prevPos > currentPos) {
+			document.querySelector(".navbar").style.top = "0";
+		} else {
+			document.querySelector(".navbar").style.top = "-50px";
+		}
+	}
+	prevPos = currentPos;
+};
