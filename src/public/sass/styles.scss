@@ -28,7 +28,6 @@ h3 {
   font-size: 1.17em;
   font-weight: bold;
 }
-
 // ---------- BULMA ADJUSTMENTS ----------
 .navbar {
   position: fixed;
@@ -36,6 +35,15 @@ h3 {
   top: 0;
   -webkit-transition: top 0.5s;
   transition: top 0.5s;
+}
+
+.navbar-brand .navbar-item {
+  padding: 0;
+  @media (min-width: 770px) {
+    width: 40%;
+    margin: 0 0 0 20px;
+    width: 100px;
+  }
 }
 
 .is-active {
@@ -248,7 +256,7 @@ h3 {
   -ms-flex-direction: column;
   flex-direction: column;
   @media (max-width: 1087px) {
-    width: 65%;
+    width: 70%;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -279,6 +287,7 @@ h3 {
 }
 // ---------- PROJECTS SECTION ----------
 // General Setup
+
 .projectSection {
   height: auto;
   padding-bottom: 75px;
@@ -287,8 +296,13 @@ h3 {
 }
 
 .projectsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   height: 85%;
@@ -297,14 +311,23 @@ h3 {
 
 .projectCard {
   border-radius: 20px;
-  margin: 20px 20px;
+  margin: 20px;
   padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: top;
+  -ms-flex-pack: top;
   justify-content: top;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 70%;
-  height: 300px;
+  height: auto;
   @media (min-width: 770px) {
     width: 40%;
   }
@@ -320,7 +343,43 @@ h3 {
   text-align: center;
 }
 
+.linksContainer {
+  width: auto;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 
+.link i {
+  font-size: 18pt;
+  padding: 0 12px;
+  color: #a8a8a8;
+
+  &:hover {
+    color: #f6ae2e;
+  }
+
+  &:visited {
+    color: #a8a8a8;
+  }
+
+  &:active {
+    color: #a8a8a8;
+  }
+}
+
+.private {
+  padding: 0 5px;
+  font-size: 14px;
+  font-style: italic;
+  cursor: default;
+  margin-top: 2.5px;
+  color: #a8a8a8;
+}
 // ---------- CONTACT SECTION ----------
 // General Setup
 

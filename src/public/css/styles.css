@@ -6957,6 +6957,14 @@ h3 {
   -webkit-transition: top 0.5s;
   transition: top 0.5s; }
 
+.navbar-brand .navbar-item {
+  padding: 0; }
+  @media (min-width: 770px) {
+    .navbar-brand .navbar-item {
+      width: 40%;
+      margin: 0 0 0 20px;
+      width: 100px; } }
+
 .is-active {
   margin-top: 5px;
   display: -webkit-box;
@@ -7132,7 +7140,7 @@ h3 {
   flex-direction: column; }
   @media (max-width: 1087px) {
     .aboutInfo {
-      width: 65%;
+      width: 70%;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
@@ -7162,8 +7170,13 @@ h3 {
   overflow: hidden; }
 
 .projectsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   height: 85%;
@@ -7171,14 +7184,23 @@ h3 {
 
 .projectCard {
   border-radius: 20px;
-  margin: 20px 20px;
+  margin: 20px;
   padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: top;
+  -ms-flex-pack: top;
   justify-content: top;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 70%;
-  height: 300px; }
+  height: auto; }
   @media (min-width: 770px) {
     .projectCard {
       width: 40%; } }
@@ -7191,6 +7213,35 @@ h3 {
   margin-top: 20px;
   font-size: 14pt;
   text-align: center; }
+
+.linksContainer {
+  width: auto;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.link i {
+  font-size: 18pt;
+  padding: 0 12px;
+  color: #a8a8a8; }
+  .link i:hover {
+    color: #f6ae2e; }
+  .link i:visited {
+    color: #a8a8a8; }
+  .link i:active {
+    color: #a8a8a8; }
+
+.private {
+  padding: 0 5px;
+  font-size: 14px;
+  font-style: italic;
+  cursor: default;
+  margin-top: 2.5px;
+  color: #a8a8a8; }
 
 .contactSection {
   height: auto;

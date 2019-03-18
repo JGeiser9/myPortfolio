@@ -54,7 +54,7 @@ window.onscroll = () => {
 		if (prevPos > currentPos) {
 			document.querySelector(".navbar").style.top = "0";
 		} else {
-			document.querySelector(".navbar").style.top = "-50px";
+			document.querySelector(".navbar").style.top = "-55px";
 		}
 	}
 	prevPos = currentPos;
