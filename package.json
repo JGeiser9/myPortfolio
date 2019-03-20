@@ -4,7 +4,9 @@
   "description": "A Personal Portfolio",
   "main": "main.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp prod",
+    "deploy": "./deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,14 @@
   "homepage": "https://github.com/JGeiser9/myPortfolio#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
+    "del": "^4.0.0",
     "eslint": "^5.13.0",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.2"
+    "gulp": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "readable-stream": "^3.2.0"
   },
   "dependencies": {
     "bulma": "^0.7.4",
