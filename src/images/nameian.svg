@@ -1,6 +1,6 @@
-<svg width="100%" height="3.04688rem" viewBox="0 0 28 45" version="1.1">
+<svg viewBox="0 0 28 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="nameian" class="svg-purple" fill="#b7bdc3">
+    <g id="nameian" class="svg-purple" fill="#000">
       <polygon id="Path-Copy-4" points="7 32.265625 9.99633789 36.2104492 9.99633789 44.0118212 0 44.0118212 0 0 3.48242188 0 20.7955264 22.0059106 20.7955264 28.0610352 3.48242188 6.31884766 3.48242188 40.5818962 6.94262695 40.5818962"></polygon>
       <polygon id="Path-Copy-5" transform="translate(17.397763, 22.005911) scale(-1, -1) translate(-17.397763, -22.005911) " points="14 32.265625 16.9963379 36.5918993 16.9963379 44.0118212 7 44.0118212 7 0 10.4824219 0 27.7955264 22.0059106 27.7955264 28.0610352 10.4824219 6.34678212 10.4824219 40.5818962 13.942627 40.5818962"></polygon>
     </g>

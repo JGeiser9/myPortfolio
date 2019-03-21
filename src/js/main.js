@@ -1,3 +1,18 @@
+/* eslint-disable-next-line */
+$(document).ready(() => {
+	/* eslint-disable-next-line */
+	toastr.options = {
+		"progressBar": true,
+		"positionClass": "toast-bottom-right",
+		"preventDuplicates": true,
+		"timeOut": "6000",
+		"showEasing": "swing",
+		"hideEasing": "linear",
+		"showMethod": "fadeIn",
+		"hideMethod": "fadeOut"
+	};
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 	// Get all "navbar-burger" elements
 	const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
@@ -26,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	let textArea = document.querySelector(".textArea");
 	let burger = document.querySelector("#burger");
 	let nav = document.querySelector("#navbar");
+	let form = document.getElementById("contactForm");
+
+	form.addEventListener("submit", sendMessage);
 
 	// Smooth scroll to section when clicked and close navbar
 	navItems.forEach( el => {
@@ -59,3 +77,33 @@ window.onscroll = () => {
 	}
 	prevPos = currentPos;
 };
+
+// Submit function called from the form
+/* eslint-disable-next-line */
+function sendMessage(event) {
+	event.preventDefault();
+	let name = `${document.querySelector(".firstName").value} ${document.querySelector(".lastName").value}`,
+		form = document.getElementById("contactForm"),
+		email = `${document.querySelector(".email").value}`,
+		textArea = `${document.querySelector(".textArea").value}`,
+		url = "https://hooks.slack.com/services/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",
+		message = {text: `Name: ${name}\nEmail: ${email}\nMessage: ${textArea}`},
+		slackMessage = JSON.stringify(message);
+	console.log("clicked");
+
+	//AJAX request to handle search results
+	const xhr = new XMLHttpRequest();
+	if (message !== 0) {
+		xhr.onreadystatechange = () => {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				toastr.success("I will get back to you soon", "Thank You");
+			} else if (xhr.readyState == 4 && xhr.status !== 200) {
+				toastr.error("Please try again or report issue <div><a class=\"toastLink\" href=\"https://github.com/JGeiser9/myPortfolio/issues\" target=\"_blank\" rel=\"noopener noreferrer\">here</a></div>", "Whoops");
+				console.log("Error" + xhr.responseText);
+			}
+		};
+		xhr.open("POST", url);
+		xhr.send(slackMessage);
+		form.reset();
+	}
+}

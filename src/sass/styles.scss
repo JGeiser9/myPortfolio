@@ -28,6 +28,10 @@ h3 {
   font-size: 1.17em;
   font-weight: bold;
 }
+
+.toastLink {
+  text-decoration: underline;
+}
 // ---------- BULMA ADJUSTMENTS ----------
 .navbar {
   position: fixed;
@@ -40,6 +44,10 @@ h3 {
 .navbar-brand .navbar-item {
   padding: 0;
   width: 100px;
+}
+
+.jagLogo {
+  height: 20px;
 }
 
 .is-active {
@@ -376,6 +384,14 @@ h3 {
   margin-top: 2.5px;
   color: #a8a8a8;
 }
+
+.projectImage {
+  height: 50px;
+  &.hnscan {
+    height: 45px;
+  }
+}
+
 // ---------- CONTACT SECTION ----------
 // General Setup
 
@@ -490,8 +506,14 @@ h3 {
     color: #fff;
     background-color: #faa100;
     border-color: #faa100;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
+
 // ---------- FOOTER ----------
 // General Setup
 

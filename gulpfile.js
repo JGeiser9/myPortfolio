@@ -1,11 +1,13 @@
-const gulp = require("gulp");
-const sass = require("gulp-sass");
-const del = require("del");
-const uglify = require("gulp-uglify-es").default;
-const htmlmin = require("gulp-htmlmin");
-const imagemin = require("gulp-imagemin");
-const pipeline = require("readable-stream").pipeline;
-const browserSync = require("browser-sync").create();
+const gulp = require("gulp"),
+	sass = require("gulp-sass"),
+	del = require("del"),
+	uglify = require("gulp-uglify-es").default,
+	htmlmin = require("gulp-htmlmin"),
+	stripComments = require("gulp-strip-css-comments"),
+	stripHTMLComments = require("gulp-htmlclean"),
+	imagemin = require("gulp-imagemin"),
+	pipeline = require("readable-stream").pipeline,
+	browserSync = require("browser-sync").create();
 
 //Create a static server
 gulp.task("serve", function() {
@@ -23,6 +25,8 @@ gulp.task("sass", function() {
 		gulp.src("./src/sass/*.scss"),
 		// Compile sass to css and minify
 		sass({outputStyle: "compressed"}),
+		// Strip all comments
+		stripComments(),
 		gulp.dest("./build/css"),
 		browserSync.stream()
 	);
@@ -32,6 +36,8 @@ gulp.task("sass", function() {
 gulp.task("js", function() {
 	return pipeline(
 		gulp.src("./src/js/*.js"),
+		// Strip all comments
+		stripComments(),
 		// Compress JS files
 		uglify(),
 		gulp.dest("./build/js")
@@ -42,6 +48,8 @@ gulp.task("js", function() {
 gulp.task("html", function() {
 	return pipeline(
 		gulp.src("./src/**/*.html"),
+		// Strip all comments
+		stripHTMLComments(),
 		// Minify HTML files
 		htmlmin({collapseWhiteSpace: true}),
 		gulp.dest("./build/")
@@ -55,6 +63,14 @@ gulp.task("img", function() {
 		// Minify images
 		imagemin(),
 		gulp.dest("./build/images")
+	);
+});
+
+// Compile HTML files into build folder
+gulp.task("misc", function() {
+	return pipeline(
+		gulp.src("./src/misc/*"),
+		gulp.dest("./build/")
 	);
 });
 
@@ -73,6 +89,6 @@ gulp.task("clean", function() {
 });
 
 // Default task to run on 'npm start'
-gulp.task("build", gulp.parallel("sass", "js", "html", "img"));
+gulp.task("build", gulp.parallel("sass", "js", "html", "img", "misc"));
 gulp.task("prod", gulp.series("clean", "build"));
 gulp.task("default", gulp.series("clean", "build", gulp.parallel("watch", "serve")));
