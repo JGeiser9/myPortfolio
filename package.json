@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "bulma": "^0.7.4",
-    "smoothscroll-polyfill": "^0.4.3"
+    "smoothscroll-polyfill": "^0.4.3",
+    "tar": "^4.4.8"
   }
 }
