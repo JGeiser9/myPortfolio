@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/JGeiser9/myPortfolio#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.7",
     "del": "^4.0.0",
     "eslint": "^5.13.0",
     "gulp": "^4.0.0",
